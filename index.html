@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <div class="header">
+            <h1 id="head1">Generate a</h1>
+            <h1 id="head2">random password</h1>
+        </div>
+        <p>Never use an insecure password again.</p>
+        <div id="length">
+            <p id="p2">Password length:</p>
+            <input type="text" id="password-length">
+        </div>
+        <div class="checkbox-container">
+            <h3>Include:</h3>
+            <form>
+                  <div class="form-group">
+                    <input type="checkbox" id="uppercase" checked>
+                    <label for="uppercase">Uppercase</label>
+                  </div>
+                  <div class="form-group">
+                    <input type="checkbox" id="lowercase" checked>
+                    <label for="lowercase">Lowercase</label>
+                  </div>
+                  <div class="form-group">
+                    <input type="checkbox" id="numbers" checked>
+                    <label for="numbers">Numbers</label>
+                  </div>
+                  <div class="form-group">
+                    <input type="checkbox" id="symbols" checked>
+                    <label for="symbols">Symbols</label>
+                  </div>
+            </form>
+        </div>
+        <button id="generate">Generate</button>
+        <!--Line needs to be implemented.-->
+        <div class="password-container">
+            <input type="text" id="password" readonly>
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>
