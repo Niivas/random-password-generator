@@ -1,5 +1,15 @@
 body {
     background: #273549;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 0px;
 }
 
 .header {
@@ -27,9 +37,9 @@ p{
     font-size: 25px;
     font-family: inter karla sans-serif !important;
     margin-top: 0px;
-    margin-left: 10px;
     font-weight: normal;
     margin-bottom: 10px;
+    padding-left: 12px;
 }
 
 #p2 {
@@ -37,13 +47,14 @@ p{
 }
 
 #length {
-    display: flex;
-    align-items: center;
-    margin-bottom: 0px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0px;
+  justify-content: space-evenly;
 }
 
 #password-length {
-    color: #fff;
+    color: #D5D4D8;
     font-size: 25px;
     font-family: inter karla sans-serif !important;
     font-weight: normal;
@@ -59,9 +70,9 @@ p{
     outline: none;
 }
 
+
 .checkbox-container {
     margin-top: 0px;
-    margin-left: 10px;
     display: flex;
     align-items: center;
     font-size: x-large;
@@ -69,6 +80,7 @@ p{
     font-family: inter karla sans-serif !important;
     display: flex;
     align-items: center;
+    padding-left: 11px;
 }
 
 h3 {
@@ -83,7 +95,7 @@ form {
   
   .form-group {
     display: block;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     margin-right: 15px;
   }
   
@@ -129,60 +141,115 @@ form {
   }
 
 button {
-    border-radius: 10px;
-    background-color: #4ADF86;
-    border: 3px solid #4ADF86;
-    color: #273549;
-    text-align: center;
-    font-size: 32px;
-    padding: 5px;
-    width: 200px;
-    height: 70px;
-    transition: all 0.5s;
-    cursor: pointer;
-    margin: 36px;
-    box-shadow: 0 10px 20px -8px rgba(0, 0, 0,.7);
-  }
-  
-  button{
-    margin-left: 10px;
-    margin-top: 10px;
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-    transition: 0.5s;
-  }
-  
-  button:after {
-    content: '»';
-    position: absolute;
-    opacity: 0;  
-    top: 14px;
-    right: -20px;
-    transition: 0.5s;
-  }
-  
-  button:hover{
-    padding-right: 24px;
-    padding-left:8px;
-  }
-  
-  button:hover:after {
-    opacity: 1;
-    right: 10px;
-  }
+  border-radius: 10px;
+  background-color: #4ADF86;
+  border: 3px solid #4ADF86;
+  color: #273549;
+  text-align: center;
+  font-size: 32px;
+  padding: 5px;
+  width: 200px;
+  height: 70px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 36px;
+  box-shadow: 0 10px 20px -8px rgba(0, 0, 0,.7);
+}
 
-  #password {
-    color: #fff;
-    font-size: 25px;
-    font-family: inter karla sans-serif !important;
-    font-weight: normal;
-    margin-left: 10px;
-    width: 200px;
-    background-color: #273549;
-    border: none;
-    border-bottom: 4px solid #4ADF86;
-    text-align: center;
-    margin-bottom: 0px;
-    margin-top: 0px;
+button{
+  margin-top: 0px;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+  margin-left: 10px;
+  margin-bottom: 25px;
+}
+
+button:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;  
+  top: 14px;
+  right: -20px;
+  transition: 0.5s;
+}
+
+button:hover{
+  padding-right: 24px;
+  padding-left:8px;
+}
+
+button:hover:after {
+  opacity: 1;
+  right: 10px;
+}
+
+.password-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0px;
+  justify-content: space-evenly;
+  margin-left: 12px;
+  padding-top: 0px;
+}
+
+#password{
+  color: #4ADF86;
+  font-size: 25px;
+  font-family: inter karla sans-serif !important;
+  font-weight: normal;
+  width: 300px;
+  background-color: #273549;
+  border: none;
+  border-bottom: 4px solid #4ADF86;
+  text-align: center;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+#password:focus {
+  outline: none;
+}
+
+#password2{
+  color: #4ADF86;
+  font-size: 25px;
+  font-family: inter karla sans-serif !important;
+  font-weight: normal;
+  width: 300px;
+  background-color: #273549;
+  border: none;
+  border-bottom: 4px solid #4ADF86;
+  text-align: center;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  margin-left: 15px;
+}
+
+#password2:focus {
+  outline: none;
+}
+
+#passwordCopy1 {
+  color: #D5D4D8;
+  font-size: 20px;
+  font-family: inter karla sans-serif !important;
+  font-weight: normal;
+  background-color: #273549;
+  border: none;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  margin-left: 15px;
+}
+
+#passwordCopy2 {
+  color: #D5D4D8;
+  font-size: 20px;
+  font-family: inter karla sans-serif !important;
+  font-weight: normal;
+  background-color: #273549;
+  border: none;
+  margin-bottom: 0px;
+  margin-top: 0px;
 }
