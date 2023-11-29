@@ -14,6 +14,8 @@ const generateButton = document.getElementById("generate");
 const resetButton = document.getElementById("reset");
 const password = document.getElementById("password");
 const password2 = document.getElementById("password2");
+let alreadyCopied1 = false;
+let alreadyCopied2 = false;
 
 passwordLength.addEventListener("input", function(e) {
     
@@ -46,6 +48,8 @@ generateButton.addEventListener("click", function(e) {
     else {
         password.value = generatePassword();
         password2.value = generatePassword();
+        alreadyCopied1 = false;
+        alreadyCopied2 = false;
     }
 });
 
@@ -99,12 +103,13 @@ resetButton.addEventListener("click", function(e) {
 });
 
 password.addEventListener("click", function(e) {
-    if (password.value !== "") {
+    if (password.value !== "" && alreadyCopied1 === false) {
         e.preventDefault();
         password.select();
         document.execCommand("copy");
         let passwordValue = password.value;
         password.value = "copied!";
+        alreadyCopied1 = true;
         setTimeout(function() {
             password.value = passwordValue;
         }, 1000);
@@ -112,12 +117,13 @@ password.addEventListener("click", function(e) {
 });
 
 password2.addEventListener("click", function(e) {
-    if (password2.value !== "") {
+    if (password2.value !== "" && alreadyCopied2 === false) {
         e.preventDefault();
         password2.select();
         document.execCommand("copy");
         let passwordValue = password2.value;
         password2.value = "copied!";
+        alreadyCopied2 = true;
         setTimeout(function() {
             password2.value = passwordValue;
         }, 1000);
